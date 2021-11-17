@@ -15,7 +15,7 @@
         justify-content: center;
         align-content: center;
         align-items: center;
-        grid-template-columns: 300px 400px 250px 50px 100px; 
+        grid-template-columns: 300px 400px 250px 50px 100px;
         width: 1920px;
         height: 80px;
     }
@@ -104,6 +104,7 @@
         font-size: 45px;
         line-height: 52px;
         color: #FFFFFF;
+        padding-right: 15px;
     }
 
     #banner2 {
@@ -114,5 +115,63 @@
     
     /* Footer */
 
-    
+    footer {
+        display: grid;
+        grid-template-areas: "titulo titulo titulo"
+                             "localizacao buttons logos";
+        grid-template-columns: auto auto auto;
+        background-color: #011627;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    footer p {
+        color: #FFFFFF;
+        font-family: Ubuntu;
+    }
+
+    #local-titulo {
+        grid-area: titulo;
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    #localizacao-area {
+        grid-area: localizacao;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .localizacao {
+        margin-right: 80px;
+    }
+
+    .cidade-titulo {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    #buttons-area {
+        grid-area: buttons;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .button {
+        width: 195px;
+        height: 38px;
+    }
+
+    #logos-footer {
+        display: flex;
+        align-items: end;
+        grid-area: logos;
+        margin-bottom: 20px;
+    }
+
+    .logos {
+        width: 134px;
+        height: 35px;
+    }
 }
