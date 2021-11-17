@@ -1,4 +1,6 @@
-@media screen and (max-width: 1920px){
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+@media screen and (min-width: 360px){
     
     /* Header */
 
@@ -31,19 +33,23 @@
         border-color: black;
         border-bottom: 2px solid;
         height: 25px;
+        font-family: Ubuntu;
+        color:#7A7A7A;
     }
 
     #conta {
         display: flex;
         justify-content: right;
         grid-area: conta;
+        font-family: Ubuntu;
+        color:#7A7A7A;
     }
 
     #carrinho {
         display: flex;
         justify-content: center;
         grid-area: carrinho;
-        border-color: black;
+        border-color:#7A7A7A;
         border-right: 2px solid;
     }
     
@@ -86,13 +92,27 @@
     }
     
     #banner1 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         background-color: #011627;
         width: 960px;
         height: 430px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 52px;
+        color: #FFFFFF;
     }
 
-    #img-fundo {
+    #banner2 {
+        background-image: url("../img/imagem_fundo.jpeg");
         width: 960px;
         height: 430px;
     }
+    
+    /* Footer */
+
+    
 }
