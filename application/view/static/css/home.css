@@ -1,0 +1,98 @@
+@media screen and (max-width: 1920px){
+    
+    /* Header */
+
+    body {
+        background-color: #FFFFFF;
+        margin: 0;
+    }
+
+    header {
+        display: grid;
+        grid-template-areas: "logo busca conta carrinho linguas";
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        grid-template-columns: 300px 400px 250px 50px 100px; 
+        width: 1920px;
+        height: 80px;
+    }
+    
+    #logo {
+        display: flex;
+        justify-content: center;
+        grid-area: logo;
+    }
+
+    #busca {
+        display: flex;
+        justify-content: space-between;
+        grid-area: busca;
+        border-color: black;
+        border-bottom: 2px solid;
+        height: 25px;
+    }
+
+    #conta {
+        display: flex;
+        justify-content: right;
+        grid-area: conta;
+    }
+
+    #carrinho {
+        display: flex;
+        justify-content: center;
+        grid-area: carrinho;
+        border-color: black;
+        border-right: 2px solid;
+    }
+    
+    #linguas {
+        display: flex;
+        justify-content: space-around;
+        grid-area: linguas;
+    }
+
+    .logo-icon{
+        width: 107px;
+        height: 30px;
+    }
+
+    .carrinho-icon {
+        width: 18.13px;
+        height: 18px;
+    }
+    
+    .bandeira {
+        width: 25.2px;
+        height: 18px;
+    }
+
+    .conta-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .lupa-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Banner */
+
+    #banner-area {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #banner1 {
+        background-color: #011627;
+        width: 960px;
+        height: 430px;
+    }
+
+    #img-fundo {
+        width: 960px;
+        height: 430px;
+    }
+}
