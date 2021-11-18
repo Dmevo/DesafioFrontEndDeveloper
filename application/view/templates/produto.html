@@ -1,0 +1,12 @@
+<img onclick="get_pag_1()" class="seta-button" src="{{ url_for('static', filename='img/seta-esquerda.png') }}">
+{% for produto in produto_lista %}
+    <div id="produto">
+        <img id="produto-img" src="{{ produto.get_img() }}">
+        <p class="produto" id="produto-nome">{{ produto.get_nome() }}</p>
+        <p class="produto" id="produto-valor-antigo">de R$ {{ produto.get_valor_antigo() }}</p>
+        <p class="produto" id="produto-valor">por R$ {{ produto.get_valor() }}</p>
+        <p class="produto" id="produto-parcela">ou em {{ produto.get_parcela() }}x de R$ {{ produto.get_valor_parcela() }}</p>
+        <img class="comprar-button" src="{{ url_for('static', filename='img/comprar.png') }}">
+    </div>
+{% endfor %}
+<img onclick="get_pag_2()" class="seta-button" src="{{ url_for('static', filename='img/seta-direita.png') }}">

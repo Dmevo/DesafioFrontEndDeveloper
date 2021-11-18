@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"/>
     <title>Profite</title>
 </head>
-<body>
+<body onload="get_pag_1()">
     <header>
         <div id="logo">
             <img class="logo-icon" src="{{ url_for('static', filename='img/logo.png') }}">
@@ -44,18 +44,9 @@
     <div id="prateleira">
         <p id="prateleira-titulo">Produtos</p>
         <div id="produtos-area">
-            <img class="seta-button" src="{{ url_for('static', filename='img/seta-esquerda.png') }}">
-            {% for produto in produto_lista %}
-                <div id="produto">
-                    <img id="produto-img" src="{{ produto.get_img() }}">
-                    <p class="produto" id="produto-nome">{{ produto.get_nome() }}</p>
-                    <p class="produto" id="produto-valor-antigo">de R$ {{ produto.get_valor_antigo() }}</p>
-                    <p class="produto" id="produto-valor">por R$ {{ produto.get_valor() }}</p>
-                    <p class="produto" id="produto-parcela">ou em {{ produto.get_parcela() }}x de R$ {{ produto.get_valor_parcela() }}</p>
-                    <img class="comprar-button" src="{{ url_for('static', filename='img/comprar.png') }}">
-                </div>
-            {% endfor %}
-            <img class="seta-button" src="{{ url_for('static', filename='img/seta-direita.png') }}">
+            
+            
+            
         </div>
     </div>
     <footer>
@@ -88,7 +79,31 @@
             <img class="logos" src="{{ url_for('static', filename='img/logos-footer.png') }}">
         </div>
         
-    </footer>
-    
+    </footer> 
 </body>
+<script>
+    function get_pag_1() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "/pag-1");
+            xhr.send(null);
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("produtos-area").innerHTML = xhr.response;
+                }
+            }
+            return false;
+    }
+
+    function get_pag_2() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "/pag-2");
+            xhr.send(null);
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("produtos-area").innerHTML = xhr.response;
+                }
+            }
+            return false;
+    }
+</script>
 </html>

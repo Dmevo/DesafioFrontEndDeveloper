@@ -266,4 +266,8 @@
         height: 32.42px;
         cursor: pointer;
     }
+
+    .seta-button {
+        cursor: pointer;
+    }
 }
