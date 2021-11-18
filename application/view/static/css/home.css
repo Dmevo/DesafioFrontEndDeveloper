@@ -161,6 +161,7 @@
     .button {
         width: 195px;
         height: 38px;
+        cursor: pointer;
     }
 
     #logos-footer {
@@ -173,5 +174,96 @@
     .logos {
         width: 134px;
         height: 35px;
+    }
+
+    /* Prateleira */
+
+    #prateleira{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #produtos-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #produto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #prateleira-titulo {
+        display: flex;
+        flex-direction: row;
+        padding-left: 15vh;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight:700;
+        font-size: 20px;
+        color: #011627;
+    }
+
+    .produto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 3px;
+    }
+
+    #produto-nome {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+        color: #7A7A7A;
+    }
+
+    #produto-valor-antigo {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        text-decoration: line-through;
+        color: #7A7A7A;
+    }
+
+    #produto-valor {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 18px;
+        color: #2EC4B6;
+    }
+
+    #produto-parcela {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #7A7A7A;
+    }
+
+    #produto-img {
+        transition: all 0.5s;
+        cursor: pointer;
+        width: 180.72px;
+        height: 149.12px;
+    }
+
+    #produto-img:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    .comprar-button {
+        width: 125.28px;
+        height: 32.42px;
+        cursor: pointer;
     }
 }
